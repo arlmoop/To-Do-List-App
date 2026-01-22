@@ -4,7 +4,7 @@
       <h1 class="text-5xl text-center mb-10">TODO LIST APP</h1>
 
       <div class="task-builder ml-20 mb-10">
-        <input class="px-3" v-model="newTask" placeholder="Add a new task"/>
+        <input class="px-3 rounded-lg border-2 border-black focus:border-black focus:outline-none" v-model="newTask" placeholder="Add a new task"/>
         <button class="px-3 bg-background_builder hover:bg-background_builder_hover" @click="addMission">Add task</button>
       </div>
 
