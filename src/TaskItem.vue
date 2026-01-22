@@ -2,7 +2,7 @@
     <li class="bg-background_li lg:max-w-4xl md:max-w-3xl sm:max-w-2xl" :class="{ completed: done }">
         {{ props.mission }}
 
-        <input class="ml-4 " type="checkbox" :checked="done" @change="toggleDone">
+        <input class="ml-4" type="checkbox" :checked="done" @change="toggleDone">
 
         <button class="bg-background_delete_button hover:bg-background_delete_button_hover 
         border-2 border-black rounded-lg ml-2 px-3" @click="deleteTask()">Delete Task</button>
@@ -30,10 +30,10 @@
   li {
     padding: 10px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
   }
 
   li.completed {
-    background-color: rgb(95, 234, 95);
+    background-color: rgb(126, 203, 131);
   }
 </style>
