@@ -1,23 +1,23 @@
 <template>
   <li
-    class="bg-background_li lg:max-w-4xl md:max-w-3xl sm:max-w-2xl"
-    :class="props.isDone ? 'bg-green-500' : ''"
+    class="flex justify-between items-center bg-blue-100 px-6 py-2 rounded-lg mb-3 mx-4"
   >
-    {{ props.title }}
+    <span class="flex-1 text-left">
+      {{ props.title }}
+    </span>
 
-    <input
-      class="ml-4"
-      type="checkbox"
-      :checked="isDone"
-      @change="toggleDone"
-    />
+    <div class="flex items-center space-x-2">
+      <input
+        type="checkbox"
+        :checked="props.isDone"
+        @change="toggleDone"
+        class="w-5 h-5"
+      />
 
-    <button
-      class="bg-background_delete_button hover:bg-background_delete_button_hover border-2 border-black rounded-lg ml-2 px-3"
-      @click="deleteTask()"
-    >
-      Delete Task
-    </button>
+      <button @click="deleteTask()" class="p-1">
+        <img src="@/assets/trash-icon.ico" alt="Delete" class="w-6 h-6" />
+      </button>
+    </div>
   </li>
 </template>
 

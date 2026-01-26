@@ -1,5 +1,4 @@
 import { ref } from "vue";
-import TaskItem from "./TaskItem.vue";
 
 export const useTasks = () => {
   const newTask = ref("");
@@ -7,7 +6,7 @@ export const useTasks = () => {
   const tasks = ref([]);
 
   const addMission = () => {
-    if (newTask.value.length === 0) return;
+    if (newTask.value.length === 0 || newTask.value.trim() === "") return;
 
     const addTask = {
       title: newTask.value,
