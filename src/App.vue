@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen flex flex-col items-center bg-gradient-to-b from-blue-400 to-blue-200 pb-20"
+    class="font-poppins min-h-screen flex flex-col items-center bg-gradient-to-b from-blue-400 to-blue-200 pb-20"
   >
     <h1 class="text-3xl font-bold text-center text-white py-10">
       TO-DO LIST APP
@@ -49,8 +49,10 @@
           :title="task.title"
           :isDone="task.isDone"
           :id="task.id"
+          :priority="task.priority"
           @toggle-task="task.isDone = $event"
           @delete-task="deleteTask(task.id)"
+          @change-priority="changePriority(task)"
         />
       </ul>
     </div>
@@ -62,5 +64,5 @@ import { ref } from "vue";
 import TaskItem from "./TaskItem.vue";
 import { useTasks } from "./composables/useTasks.js";
 
-const { newTask, tasks, addMission, deleteTask } = useTasks();
+const { newTask, tasks, addMission, deleteTask, changePriority } = useTasks();
 </script>

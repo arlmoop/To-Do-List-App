@@ -5,36 +5,46 @@
     <link rel="icon" href="image-icon-todo-list.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List App</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F54927",
+              title: "#F54927",
+              body: "#475AED",
+              background: "#CCCFC8",
+              background_builder: "#7ECB83",
+              background_builder_hover: "#91D996",
+              background_li: "#E3E5E1",
+              background_li_hover: "#CCEB8F",
+              background_delete_button: "#FF6969",
+              background_delete_button_hover: "#FF8282",
+            },
+            fontFamily: {
+              display: ["Lucida Console", "Courier New", "monospace"],
+              sans: ["Poppins", "sans-serif"],
+              roboto: ["Roboto", "sans-serif"],
+              poppins: ["Poppins", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
+
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Ici, tu peux étendre les couleurs et fonts si tu veux
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#F54927",
-            title: "#F54927",
-            body: "#475AED",
-            background: "#CCCFC8",
-            background_builder: "#7ECB83",
-            background_builder_hover: "#91D996",
-            background_li: "#E3E5E1",
-            background_li_hover: "#CCEB8F",
-            background_delete_button: "#FF6969",
-            background_delete_button_hover: "#FF8282",
-          },
-          fontFamily: {
-            display: ["Lucida Console", "Courier New", "monospace"],
-            sans: ["Poppins", "sans-serif"],
-          },
-        },
-      },
-    };
-  </script>
 </html>

@@ -2,9 +2,15 @@
   <li
     class="flex justify-between items-center bg-blue-100 px-6 py-2 rounded-lg mb-3 mx-4"
   >
-    <span class="flex-1 text-left">
+    <span class="flex-1 text-left wrap-break-word pr-2">
       {{ props.title }}
     </span>
+
+    <span
+      class="bg-white border-2 border-gray-300 rounded-full mr-10 px-4 py-1"
+      @click="changePriority()"
+      >{{ text_priority }} Priority</span
+    >
 
     <div class="flex items-center space-x-2">
       <input
@@ -22,13 +28,16 @@
 </template>
 
 <script setup>
+import { ref, computed } from "vue";
+
 const props = defineProps({
+  id: Number,
   title: String,
   isDone: Boolean,
-  id: Number,
+  priority: Number,
 });
 
-const emit = defineEmits(["toggle-task", "delete-task"]);
+const emit = defineEmits(["toggle-task", "delete-task", "change-priority"]);
 
 const toggleDone = (event) => {
   emit("toggle-task", event.target.checked);
@@ -37,4 +46,18 @@ const toggleDone = (event) => {
 const deleteTask = () => {
   emit("delete-task");
 };
+
+const changePriority = () => {
+  emit("change-priority");
+};
+
+const text_priority = computed(() => {
+  if (props.priority === 1) {
+    return "Low";
+  } else if (props.priority === 2) {
+    return "Medium";
+  } else {
+    return "High";
+  }
+});
 </script>
