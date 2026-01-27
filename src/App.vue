@@ -32,6 +32,7 @@
           v-model="newTask"
           placeholder="Add a new task"
           class="flex-1 border border-gray-300 rounded-l-lg px-4 py-2 focus:outline-none focus:ring-0 focus:ring-blue-400 focus:border-blue-400 focus:border-gray-300"
+          @keyup.enter="addMission"
         />
 
         <button
@@ -44,7 +45,7 @@
 
       <select
         v-model="option_selected"
-        class="focus:ring-0 border border-black rounded-full px-6 py-1.5 pr-6 mb-1 bg-white text-black text-center focus:outline-none shadow-sm"
+        class="focus:ring-0 border border-black rounded-full px-6 py-1.5 pr-6 mb-1 ml-5 bg-white text-black text-center focus:outline-none shadow-sm"
       >
         <option value="all">All</option>
         <option value="done">Completed</option>
@@ -62,6 +63,7 @@
           :isDone="task.isDone"
           :id="task.id"
           :priority="task.priority"
+          :dateString="task.dateString"
           @toggle-task="task.isDone = $event"
           @delete-task="deleteTask(task.id)"
           @change-priority="changePriority(task)"

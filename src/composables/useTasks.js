@@ -5,17 +5,50 @@ export const useTasks = () => {
 
   const newTask = ref("");
 
-  const tasks = ref([]);
+  /* INITIALISATION DE LA LISTE DE TACHES A 0
+  const tasks = ref([]); */
+
+  /* INIALISATION DE LA LISTE AVEC DES EXEMPLES */
+  const makeTask = (title, daysAgo, isDone, priority) => {
+    const now = Date.now();
+    const taskId = now - daysAgo * 24 * 60 * 60 * 1000;
+
+    return {
+      title,
+      isDone,
+      id: taskId,
+      priority,
+      dateString: new Date(taskId).toLocaleDateString("fr-FR"),
+    };
+  };
+
+  const tasks = ref([
+    makeTask("Learn Vue 3", 0, false, 1),
+    makeTask("Build Todo UI", 1, true, 2),
+    makeTask("Fix filtering logic", 2, false, 3),
+    makeTask("Add delete confirmation", 3, true, 2),
+    makeTask("Improve UX", 4, false, 1),
+    makeTask("Refactor composables", 5, true, 3),
+    makeTask("Style select component", 6, false, 2),
+    makeTask("Add priorities", 7, true, 1),
+    makeTask("Test edge cases", 8, false, 3),
+    makeTask("Polish animations", 9, true, 2),
+  ]);
 
   const addMission = () => {
     if (newTask.value.length === 0 || newTask.value.trim() === "") return;
 
+    const taskId = Date.now();
+
     const addTask = {
       title: newTask.value,
       isDone: false,
-      id: Date.now(),
+      id: taskId,
       priority: 1,
+      dateString: new Date(taskId).toLocaleDateString("fr-FR"),
     };
+
+    console.log(addTask.dateString);
 
     tasks.value.push(addTask);
     newTask.value = "";

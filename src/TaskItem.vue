@@ -11,6 +11,8 @@
       {{ text_priority }} Priority</span
     >
 
+    <div class="mr-8">{{ props.dateString }}</div>
+
     <div class="flex items-center space-x-2">
       <input
         type="checkbox"
@@ -43,6 +45,7 @@ const props = defineProps({
   title: String,
   isDone: Boolean,
   priority: Number,
+  dateString: String,
 });
 
 const emit = defineEmits(["toggle-task", "delete-task", "change-priority"]);
