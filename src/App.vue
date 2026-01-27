@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <div class="flex items-center w-full max-w-5xl mx-auto mb-5">
+      <div class="flex w-full max-w-5xl mx-auto mb-5">
         <input
           v-model="newTask"
           placeholder="Add a new task"
@@ -42,7 +42,10 @@
         </button>
       </div>
 
-      <select v-model="option_selected">
+      <select
+        v-model="option_selected"
+        class="focus:ring-0 border border-black rounded-full px-6 py-1.5 pr-6 mb-1 bg-white text-black text-center focus:outline-none shadow-sm"
+      >
         <option value="all">All</option>
         <option value="done">Completed</option>
         <option value="todo">Pending</option>

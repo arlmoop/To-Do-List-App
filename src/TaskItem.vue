@@ -19,15 +19,24 @@
         class="w-5 h-5"
       />
 
-      <button @click="deleteTask()" class="p-1">
+      <button @click="show_delete_task = true" class="p-1">
         <img src="@/assets/trash-icon.ico" alt="Delete" class="w-6 h-6" />
       </button>
+
+      <ConfirmDelete
+        v-if="show_delete_task"
+        @close="show_delete_task = false"
+        @delete-task="deleteTask"
+      />
     </div>
   </li>
 </template>
 
 <script setup>
 import { ref, computed } from "vue";
+import ConfirmDelete from "./ConfirmDelete.vue";
+
+const show_delete_task = ref(false);
 
 const props = defineProps({
   id: Number,
