@@ -5,10 +5,10 @@ export const useTasks = () => {
 
   const newTask = ref("");
 
-  /* INITIALISATION DE LA LISTE DE TACHES A 0
-  const tasks = ref([]); */
+  // INITIALISATION DE LA LISTE DE TACHES A 0
+  const tasks = ref([]);
 
-  /* INIALISATION DE LA LISTE AVEC DES EXEMPLES */
+  /* INIALISATION DE LA LISTE AVEC DES EXEMPLES 
   const makeTask = (title, daysAgo, isDone, priority) => {
     const now = Date.now();
     const taskId = now - daysAgo * 24 * 60 * 60 * 1000;
@@ -33,7 +33,7 @@ export const useTasks = () => {
     makeTask("Add priorities", 7, true, 1),
     makeTask("Test edge cases", 8, false, 3),
     makeTask("Polish animations", 9, true, 2),
-  ]);
+  ]); */
 
   const addMission = () => {
     if (newTask.value.length === 0 || newTask.value.trim() === "") return;
@@ -44,11 +44,10 @@ export const useTasks = () => {
       title: newTask.value,
       isDone: false,
       id: taskId,
+      state: "to-do",
       priority: 1,
       dateString: new Date(taskId).toLocaleDateString("fr-FR"),
     };
-
-    console.log(addTask.dateString);
 
     tasks.value.push(addTask);
     newTask.value = "";
@@ -64,6 +63,18 @@ export const useTasks = () => {
       task.priority = 1;
     } else {
       task.priority++;
+    }
+  };
+
+  const changeState = (task) => {
+    if (task.state === "to-do") {
+      task.state = "in-progress";
+    } else if (task.state === "in-progress") {
+      task.state = "done";
+    } else if (task.state === "done") {
+      task.state = "to-do";
+    } else {
+      task.state = "to-do";
     }
   };
 
@@ -95,5 +106,6 @@ export const useTasks = () => {
     addMission,
     deleteTask,
     changePriority,
+    changeState,
   };
 };

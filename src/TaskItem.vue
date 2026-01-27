@@ -14,11 +14,10 @@
     <div class="mr-8">{{ props.dateString }}</div>
 
     <div class="flex items-center space-x-2">
-      <input
-        type="checkbox"
-        :checked="props.isDone"
-        @change="toggleDone"
-        class="w-5 h-5"
+      <img
+        :src="'/images/' + icon_state_path"
+        @click="changeState()"
+        class="w-6 h-6 mr-4"
       />
 
       <button @click="show_delete_task = true" class="p-1">
@@ -44,11 +43,17 @@ const props = defineProps({
   id: Number,
   title: String,
   isDone: Boolean,
+  state: String,
   priority: Number,
   dateString: String,
 });
 
-const emit = defineEmits(["toggle-task", "delete-task", "change-priority"]);
+const emit = defineEmits([
+  "toggle-task",
+  "delete-task",
+  "change-priority",
+  "change-state",
+]);
 
 const toggleDone = (event) => {
   emit("toggle-task", event.target.checked);
@@ -60,6 +65,10 @@ const deleteTask = () => {
 
 const changePriority = () => {
   emit("change-priority");
+};
+
+const changeState = () => {
+  emit("change-state");
 };
 
 const text_priority = computed(() => {
@@ -79,6 +88,29 @@ const bg_circle = computed(() => {
     return "bg-yellow-400";
   } else {
     return "bg-red-400";
+  }
+});
+
+const status_text = computed(() => {
+  if (props.state === "to-do") {
+    return "To-Do";
+  } else if (props.state === "in-progress") {
+    return "In Progress";
+  } else {
+    return "Done";
+  }
+});
+
+const icon_state_path = computed(() => {
+  console.log(props.state);
+  if (props.state === "to-do") {
+    return "task-to-do.png";
+  } else if (props.state === "in-progress") {
+    return "task-in-progress.png";
+  } else if (props.state === "done") {
+    return "task-done.png";
+  } else {
+    return "task-to-do.png";
   }
 });
 </script>

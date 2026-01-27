@@ -15,14 +15,23 @@
         </div>
 
         <div class="flex-1 flex justify-center">
-          <p class="text-green-700 bg-green-200 px-4 py-1 rounded-full w-fit">
-            Completed : {{ tasks.filter((task) => task.isDone).length }}
+          <p class="text-blue-700 bg-sky-200 px-4 py-1 rounded-full w-fit">
+            To Do :
+            {{ tasks.filter((task) => task.state === "to-do").length }}
           </p>
         </div>
 
         <div class="flex-1 flex justify-center">
           <p class="text-orange-700 bg-orange-200 px-4 py-1 rounded-full w-fit">
-            Pending : {{ tasks.filter((task) => !task.isDone).length }}
+            Pending :
+            {{ tasks.filter((task) => task.state === "in-progress").length }}
+          </p>
+        </div>
+
+        <div class="flex-1 flex justify-center">
+          <p class="text-green-700 bg-green-200 px-4 py-1 rounded-full w-fit">
+            Completed :
+            {{ tasks.filter((task) => task.state === "done").length }}
           </p>
         </div>
       </div>
@@ -45,7 +54,7 @@
 
       <select
         v-model="option_selected"
-        class="focus:ring-0 border border-black rounded-full px-6 py-1.5 pr-6 mb-1 ml-5 bg-white text-black text-center focus:outline-none shadow-sm"
+        class="bg-gray-200 focus:ring-0 border-none border-gray-700 px-4 py-1 rounded-full w-fit mb-1 ml-5 text-gray-700 text-center focus:outline-none shadow-sm"
       >
         <option value="all">All</option>
         <option value="done">Completed</option>
@@ -61,12 +70,14 @@
           :key="index"
           :title="task.title"
           :isDone="task.isDone"
+          :state="task.state"
           :id="task.id"
           :priority="task.priority"
           :dateString="task.dateString"
           @toggle-task="task.isDone = $event"
           @delete-task="deleteTask(task.id)"
           @change-priority="changePriority(task)"
+          @change-state="changeState(task)"
         />
       </ul>
     </div>
@@ -86,5 +97,6 @@ const {
   addMission,
   deleteTask,
   changePriority,
+  changeState,
 } = useTasks();
 </script>
