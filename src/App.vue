@@ -46,6 +46,9 @@
         <option value="all">All</option>
         <option value="done">Completed</option>
         <option value="todo">Pending</option>
+        <option value="high_priority">High Priority</option>
+        <option value="medium_priority">Medium Priority</option>
+        <option value="low_priority">Low Priority</option>
       </select>
 
       <ul>

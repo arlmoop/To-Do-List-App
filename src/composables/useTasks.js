@@ -43,6 +43,12 @@ export const useTasks = () => {
       return tasks.value.filter((task) => !task.isDone);
     } else if (option_selected.value === "done") {
       return tasks.value.filter((task) => task.isDone);
+    } else if (option_selected.value === "high_priority") {
+      return tasks.value.filter((task) => task.priority === 3);
+    } else if (option_selected.value === "medium_priority") {
+      return tasks.value.filter((task) => task.priority === 2);
+    } else if (option_selected.value === "low_priority") {
+      return tasks.value.filter((task) => task.priority === 1);
     } else {
       return tasks.value;
     }
