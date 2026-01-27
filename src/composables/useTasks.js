@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 export const useTasks = () => {
   const MAX_PRIORITY = 3;
@@ -34,9 +34,25 @@ export const useTasks = () => {
     }
   };
 
+  const option_selected = ref("all");
+
+  const filteredTasks = computed(() => {
+    if (option_selected.value === "all") {
+      return tasks.value;
+    } else if (option_selected.value === "todo") {
+      return tasks.value.filter((task) => !task.isDone);
+    } else if (option_selected.value === "done") {
+      return tasks.value.filter((task) => task.isDone);
+    } else {
+      return tasks.value;
+    }
+  });
+
   return {
     newTask,
     tasks,
+    option_selected,
+    filteredTasks,
     addMission,
     deleteTask,
     changePriority,

@@ -42,9 +42,15 @@
         </button>
       </div>
 
+      <select v-model="option_selected">
+        <option value="all">All</option>
+        <option value="done">Completed</option>
+        <option value="todo">Pending</option>
+      </select>
+
       <ul>
         <TaskItem
-          v-for="(task, index) in tasks"
+          v-for="(task, index) in filteredTasks"
           :key="index"
           :title="task.title"
           :isDone="task.isDone"
@@ -64,5 +70,13 @@ import { ref } from "vue";
 import TaskItem from "./TaskItem.vue";
 import { useTasks } from "./composables/useTasks.js";
 
-const { newTask, tasks, addMission, deleteTask, changePriority } = useTasks();
+const {
+  newTask,
+  tasks,
+  option_selected,
+  filteredTasks,
+  addMission,
+  deleteTask,
+  changePriority,
+} = useTasks();
 </script>
