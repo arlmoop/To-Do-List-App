@@ -7,10 +7,7 @@
     <span
       class="flex flex-row bg-white border-2 border-gray-300 rounded-full mr-10 px-4 py-1 select-none cursor-pointer items-center"
       @click="changePriority()"
-      ><div
-        class="w-3 h-3 rounded-full bg-red-400 mr-2"
-        :class="bg_circle"
-      ></div>
+      ><div class="w-3 h-3 rounded-full mr-2" :class="bg_circle"></div>
       {{ text_priority }} Priority</span
     >
 
