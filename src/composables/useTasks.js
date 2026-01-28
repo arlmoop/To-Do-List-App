@@ -33,6 +33,12 @@ export const useTasks = () => {
     makeTask("Add priorities", 7, "in-progress", 1),
     makeTask("Test edge cases", 8, "done", 3),
     makeTask("Polish animations", 9, "to-do", 2),
+    makeTask(
+      "dzeubduzd zhd zd zie dz dh zje dize dz djkze dihz dizd dzeubduzd zhd zd zie dz dh zje dize dz djkze dihz dizd",
+      9,
+      "to-do",
+      2,
+    ),
   ]);
 
   const addMission = () => {

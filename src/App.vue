@@ -7,7 +7,9 @@
     </h1>
 
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-5xl">
-      <div class="flex flex-row gap-10 mb-6">
+      <div
+        class="grid grid-cols-4 max-md:grid-cols-2 gap-10 mb-6 max-md:grid-cols-2"
+      >
         <div class="flex-1 flex justify-center">
           <p class="text-purple-700 bg-purple-200 px-4 py-1 rounded-full w-fit">
             Total : {{ tasks.length }}
@@ -83,7 +85,7 @@
           @delete-task="deleteTask(task.id)"
           @change-priority="changePriority(task)"
           @change-state="changeState(task)"
-          class="mt-2"
+          class="mt-2 max-md:text-xs"
         />
       </ul>
     </div>

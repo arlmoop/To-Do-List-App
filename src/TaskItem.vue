@@ -1,10 +1,12 @@
 <template>
-  <li class="flex justify-between items-center px-6 py-2 rounded-lg mb-3 mx-4">
-    <div class="flex-1 text-left pr-4 max-w-md relative group">
+  <li
+    class="grid grid-cols-[1fr_auto] md:grid-cols-[minmax(200px,1fr)_auto] items-center px-6 py-2 rounded-lg mb-3 mx-4 gap-4"
+  >
+    <div class="text-left relative group min-w-0">
       <span class="truncate block">
         {{ props.title }}
       </span>
-      <!-- Tooltip -->
+      <!-- Tooltip de Claude -->
       <div
         class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-lg px-3 py-2 whitespace-normal break-words max-w-xs z-10 shadow-lg"
       >
@@ -16,12 +18,11 @@
     </div>
 
     <div
-      class="grid items-center"
-      style="grid-template-columns: 220px 120px auto"
+      class="grid items-center grid-cols-[220px_120px_auto] max-md:grid-cols-[190px_80px_auto] shrink-0"
     >
       <div class="flex justify-start">
         <span
-          class="flex flex-row bg-white border-2 border-gray-300 rounded-full mr-10 px-4 py-1 select-none cursor-pointer items-center"
+          class="flex flex-row bg-white border-2 border-gray-300 rounded-full px-4 py-1 select-none cursor-pointer items-center"
           @click="changePriority()"
           ><div class="w-3 h-3 rounded-full mr-2" :class="bg_circle"></div>
           {{ text_priority }} Priority</span
@@ -33,7 +34,7 @@
         <img
           :src="'/images/' + icon_state_path"
           @click="changeState()"
-          class="w-6 h-6 mr-4"
+          class="w-6 h-6 mr-4 max-md:mr-2"
         />
 
         <button @click="show_delete_task = true" class="p-1 select-none">
