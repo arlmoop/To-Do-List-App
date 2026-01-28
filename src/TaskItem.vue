@@ -1,8 +1,19 @@
 <template>
   <li class="flex justify-between items-center px-6 py-2 rounded-lg mb-3 mx-4">
-    <span class="flex-1 text-left wrap-break-word pr-2">
-      {{ props.title }}
-    </span>
+    <div class="flex-1 text-left pr-4 max-w-md relative group">
+      <span class="truncate block">
+        {{ props.title }}
+      </span>
+      <!-- Tooltip -->
+      <div
+        class="absolute left-0 bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-lg px-3 py-2 whitespace-normal break-words max-w-xs z-10 shadow-lg"
+      >
+        {{ props.title }}
+        <div
+          class="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"
+        ></div>
+      </div>
+    </div>
 
     <div
       class="grid items-center"

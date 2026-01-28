@@ -83,6 +83,7 @@
           @delete-task="deleteTask(task.id)"
           @change-priority="changePriority(task)"
           @change-state="changeState(task)"
+          class="mt-2"
         />
       </ul>
     </div>
