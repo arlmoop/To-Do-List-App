@@ -23,7 +23,7 @@
 
         <div class="flex-1 flex justify-center">
           <p class="text-orange-700 bg-orange-200 px-4 py-1 rounded-full w-fit">
-            Pending :
+            In Progress :
             {{ tasks.filter((task) => task.state === "in-progress").length }}
           </p>
         </div>
@@ -58,7 +58,8 @@
       >
         <option value="all">All</option>
         <option value="done">Completed</option>
-        <option value="todo">Pending</option>
+        <option value="in_progress">In Progress</option>
+        <option value="to_do">To Do</option>
         <option value="high_priority">High Priority</option>
         <option value="medium_priority">Medium Priority</option>
         <option value="low_priority">Low Priority</option>

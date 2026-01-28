@@ -83,10 +83,12 @@ export const useTasks = () => {
   const filteredTasks = computed(() => {
     if (option_selected.value === "all") {
       return tasks.value;
-    } else if (option_selected.value === "todo") {
-      return tasks.value.filter((task) => !task.isDone);
+    } else if (option_selected.value === "to_do") {
+      return tasks.value.filter((task) => task.state === "to-do");
+    } else if (option_selected.value === "in_progress") {
+      return tasks.value.filter((task) => task.state === "in-progress");
     } else if (option_selected.value === "done") {
-      return tasks.value.filter((task) => task.isDone);
+      return tasks.value.filter((task) => task.state === "done");
     } else if (option_selected.value === "high_priority") {
       return tasks.value.filter((task) => task.priority === 3);
     } else if (option_selected.value === "medium_priority") {

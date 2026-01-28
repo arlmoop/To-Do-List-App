@@ -13,14 +13,14 @@
 
     <div class="mr-8">{{ props.dateString }}</div>
 
-    <div class="flex items-center space-x-2">
+    <div class="flex items-center space-x-2 select-none">
       <img
         :src="'/images/' + icon_state_path"
         @click="changeState()"
         class="w-6 h-6 mr-4"
       />
 
-      <button @click="show_delete_task = true" class="p-1">
+      <button @click="show_delete_task = true" class="p-1 select-none">
         <img src="@/assets/trash-icon.ico" alt="Delete" class="w-6 h-6" />
       </button>
 
