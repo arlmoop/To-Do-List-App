@@ -7,7 +7,7 @@
  - Apply filters to the list of tasks
  - Responsive design for different devices (tablet and computer)
 
-#📸 Screenshots of the project
+# 📸 Screenshots of the project
 
 ##🏠 Home :
 
