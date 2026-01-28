@@ -62,22 +62,22 @@ The application is fully responsive. There are two different layouts: one for co
 
 # ⚙️ Installation
 
-Clone the repository:
+- Clone the repository:
 ```bash
 git clone https://github.com/arlmoop/To-Do-List-App
 ```
 
-Navigate into the project folder:
+- Navigate into the project folder:
 ```bash
 cd To-Do-List-App
 ```
 
-Install dependencies:
+- Install dependencies:
 ```bash
 npm install
 ```
 
-Run the development server:
+- Run the development server:
 ```bash
 npm run dev
 ```
