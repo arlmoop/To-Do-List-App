@@ -5,41 +5,7 @@ export const useTasks = () => {
 
   const newTask = ref("");
 
-  // INITIALISATION DE LA LISTE DE TACHES A 0
-  // const tasks = ref([]);
-
-  /* INIALISATION DE LA LISTE AVEC DES EXEMPLES */
-  const makeTask = (title, daysAgo, taskState, priority) => {
-    const now = Date.now();
-    const taskId = now - daysAgo * 24 * 60 * 60 * 1000;
-
-    return {
-      title,
-      state: taskState,
-      id: taskId,
-      priority,
-      dateString: new Date(taskId).toLocaleDateString("fr-FR"),
-    };
-  };
-
-  const tasks = ref([
-    makeTask("Learn Vue 3", 0, "to-do", 1),
-    makeTask("Build Todo UI", 1, "in-progress", 2),
-    makeTask("Fix filtering logic", 2, "to-do", 3),
-    makeTask("Add delete confirmation", 3, "done", 2),
-    makeTask("Improve UX", 4, "done", 1),
-    makeTask("Refactor composables", 5, "done", 3),
-    makeTask("Style select component", 6, "in-progress", 2),
-    makeTask("Add priorities", 7, "in-progress", 1),
-    makeTask("Test edge cases", 8, "done", 3),
-    makeTask("Polish animations", 9, "to-do", 2),
-    makeTask(
-      "dzeubduzd zhd zd zie dz dh zje dize dz djkze dihz dizd dzeubduzd zhd zd zie dz dh zje dize dz djkze dihz dizd",
-      9,
-      "to-do",
-      2,
-    ),
-  ]);
+  const tasks = ref([]);
 
   const addMission = () => {
     if (newTask.value.length === 0 || newTask.value.trim() === "") return;
