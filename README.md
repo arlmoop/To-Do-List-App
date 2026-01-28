@@ -8,7 +8,48 @@ This repository contains a to-do list project develops with Vue JS. The App have
 - Apply filter to the list of tasks
 - Responsive design for differents devices (tablet and computer)
 
+## Screenshots
+
+### Home
+
+Here is a screenshot of the home page
+
 ![Home](./src/assets/screenshots/home.png)
+
+### Create a Task
+
+The input allows you to choose the title of the task. You can create the task by pressing the "enter" key or press the button on the right of the input.
+
+![Counter](./src/assets/screenshots/input-title-task.png)
+
+### Tasks Counter
+
+The counters update automatically whenever a task is created or modified. There is a specific counter for each available status.
+
+![Counter](./src/assets/screenshots/tasks-counter.png)
+
+### Filter
+
+The filter permits you to select the tasks by their state or priority.
+
+![filter](./src/assets/screenshots/filter-select.png)
+![options](./src/assets/screenshots/options-select.png)
+
+### Priority
+
+You can custom the priority of each tasks created. There are three levels of priority : Low, Medium, High.
+
+![priority](./src/assets/screenshots/priorities.png)
+
+:
+:
+:
+::
+:
+:
+:
+:
+:
 
 ## Recommended IDE Setup
 
