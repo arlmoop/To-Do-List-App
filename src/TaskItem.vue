@@ -1,6 +1,6 @@
 <template>
   <li
-    class="grid grid-cols-[1fr_auto] md:grid-cols-[minmax(200px,1fr)_auto] items-center px-6 py-2 rounded-lg mb-3 mx-4 gap-4"
+    class="grid grid-cols-[1fr_auto] max-[810px]:grid-cols-[minmax(200px,1fr)_auto] items-center px-6 py-2 rounded-lg mb-3 mx-4 gap-4"
   >
     <div class="text-left relative group min-w-0">
       <span class="truncate block">
@@ -18,7 +18,7 @@
     </div>
 
     <div
-      class="grid items-center grid-cols-[220px_120px_auto] max-md:grid-cols-[190px_80px_auto] shrink-0"
+      class="grid items-center grid-cols-[220px_120px_auto] max-[810px]:grid-cols-[190px_80px_auto] shrink-0"
     >
       <div class="flex justify-start">
         <span
@@ -34,7 +34,7 @@
         <img
           :src="'/images/' + icon_state_path"
           @click="changeState()"
-          class="w-6 h-6 mr-4 max-md:mr-2"
+          class="w-6 h-6 mr-4 max-[810px]:mr-2"
         />
 
         <button @click="show_delete_task = true" class="p-1 select-none">
