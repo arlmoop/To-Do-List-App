@@ -1,6 +1,11 @@
-# todo_App
+# To-Do List App de Aurélien.K
 
-This template should help get you started developing with Vue 3 in Vite.
+This repository contains a to-do list project develops with Vue JS. The App have many features :
+  - Create custom tasks with different states : (To-Do, In Progress, Completed)
+  - Contain statics of the number of tasks remaining
+  - Change the level of priority of the task
+  - Apply filter to the list of tasks
+  - Responsive design for differents devices (tablet and computer)
 
 ## Recommended IDE Setup
 
