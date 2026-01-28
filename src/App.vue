@@ -48,7 +48,11 @@
           @click="addMission"
           class="transition border border-gray-300 border-l-0 rounded-r-lg px-3 py-2 flex items-center justify-center"
         >
-          <img src="@/assets/arrow-icon.ico" alt="Add" class="w-6 h-6" />
+          <img
+            src="@/assets/arrow-icon.ico"
+            alt="Add"
+            class="w-6 h-6 select-none"
+          />
         </button>
       </div>
 

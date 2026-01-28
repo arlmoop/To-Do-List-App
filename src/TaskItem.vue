@@ -4,31 +4,37 @@
       {{ props.title }}
     </span>
 
-    <span
-      class="flex flex-row bg-white border-2 border-gray-300 rounded-full mr-10 px-4 py-1 select-none cursor-pointer items-center"
-      @click="changePriority()"
-      ><div class="w-3 h-3 rounded-full mr-2" :class="bg_circle"></div>
-      {{ text_priority }} Priority</span
+    <div
+      class="grid items-center"
+      style="grid-template-columns: 220px 120px auto"
     >
+      <div class="flex justify-start">
+        <span
+          class="flex flex-row bg-white border-2 border-gray-300 rounded-full mr-10 px-4 py-1 select-none cursor-pointer items-center"
+          @click="changePriority()"
+          ><div class="w-3 h-3 rounded-full mr-2" :class="bg_circle"></div>
+          {{ text_priority }} Priority</span
+        >
+      </div>
+      <div class="mr-8 whitespace-nowrap">{{ props.dateString }}</div>
 
-    <div class="mr-8">{{ props.dateString }}</div>
+      <div class="flex items-center space-x-2 select-none">
+        <img
+          :src="'/images/' + icon_state_path"
+          @click="changeState()"
+          class="w-6 h-6 mr-4"
+        />
 
-    <div class="flex items-center space-x-2 select-none">
-      <img
-        :src="'/images/' + icon_state_path"
-        @click="changeState()"
-        class="w-6 h-6 mr-4"
-      />
+        <button @click="show_delete_task = true" class="p-1 select-none">
+          <img src="@/assets/trash-icon.ico" alt="Delete" class="w-6 h-6" />
+        </button>
 
-      <button @click="show_delete_task = true" class="p-1 select-none">
-        <img src="@/assets/trash-icon.ico" alt="Delete" class="w-6 h-6" />
-      </button>
-
-      <ConfirmDelete
-        v-if="show_delete_task"
-        @close="show_delete_task = false"
-        @delete-task="deleteTask"
-      />
+        <ConfirmDelete
+          v-if="show_delete_task"
+          @close="show_delete_task = false"
+          @delete-task="deleteTask"
+        />
+      </div>
     </div>
   </li>
 </template>

@@ -6,16 +6,16 @@ export const useTasks = () => {
   const newTask = ref("");
 
   // INITIALISATION DE LA LISTE DE TACHES A 0
-  const tasks = ref([]);
+  // const tasks = ref([]);
 
-  /* INIALISATION DE LA LISTE AVEC DES EXEMPLES 
-  const makeTask = (title, daysAgo, isDone, priority) => {
+  /* INIALISATION DE LA LISTE AVEC DES EXEMPLES */
+  const makeTask = (title, daysAgo, taskState, priority) => {
     const now = Date.now();
     const taskId = now - daysAgo * 24 * 60 * 60 * 1000;
 
     return {
       title,
-      isDone,
+      state: taskState,
       id: taskId,
       priority,
       dateString: new Date(taskId).toLocaleDateString("fr-FR"),
@@ -23,17 +23,17 @@ export const useTasks = () => {
   };
 
   const tasks = ref([
-    makeTask("Learn Vue 3", 0, false, 1),
-    makeTask("Build Todo UI", 1, true, 2),
-    makeTask("Fix filtering logic", 2, false, 3),
-    makeTask("Add delete confirmation", 3, true, 2),
-    makeTask("Improve UX", 4, false, 1),
-    makeTask("Refactor composables", 5, true, 3),
-    makeTask("Style select component", 6, false, 2),
-    makeTask("Add priorities", 7, true, 1),
-    makeTask("Test edge cases", 8, false, 3),
-    makeTask("Polish animations", 9, true, 2),
-  ]); */
+    makeTask("Learn Vue 3", 0, "to-do", 1),
+    makeTask("Build Todo UI", 1, "in-progress", 2),
+    makeTask("Fix filtering logic", 2, "to-do", 3),
+    makeTask("Add delete confirmation", 3, "done", 2),
+    makeTask("Improve UX", 4, "done", 1),
+    makeTask("Refactor composables", 5, "done", 3),
+    makeTask("Style select component", 6, "in-progress", 2),
+    makeTask("Add priorities", 7, "in-progress", 1),
+    makeTask("Test edge cases", 8, "done", 3),
+    makeTask("Polish animations", 9, "to-do", 2),
+  ]);
 
   const addMission = () => {
     if (newTask.value.length === 0 || newTask.value.trim() === "") return;
