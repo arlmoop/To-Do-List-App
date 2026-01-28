@@ -106,6 +106,10 @@ export const useTasks = () => {
     }
   });
 
+  const cleanAll = () => {
+    tasks.value = [];
+  };
+
   return {
     newTask,
     tasks,
@@ -115,5 +119,6 @@ export const useTasks = () => {
     deleteTask,
     changePriority,
     changeState,
+    cleanAll,
   };
 };

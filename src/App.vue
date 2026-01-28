@@ -1,6 +1,6 @@
 <template>
   <div
-    class="font-poppins min-h-screen flex flex-col items-center bg-gradient-to-b from-blue-400 to-blue-200 pb-20"
+    class="min-w-[708px] font-poppins min-h-screen flex flex-col items-center bg-gradient-to-b from-blue-400 to-blue-200 pb-20"
   >
     <h1 class="text-3xl font-bold text-center text-white py-10">
       TO-DO LIST APP
@@ -88,6 +88,14 @@
           class="mt-2 max-[810px]:text-xs"
         />
       </ul>
+
+      <button
+        v-if="tasks.length !== 0"
+        class="text-red-700 bg-red-200 px-4 py-1 rounded-full w-fit ml-5"
+        @click="cleanAll"
+      >
+        Clean All
+      </button>
     </div>
   </div>
 </template>
@@ -106,5 +114,6 @@ const {
   deleteTask,
   changePriority,
   changeState,
+  cleanAll,
 } = useTasks();
 </script>
