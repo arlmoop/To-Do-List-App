@@ -41,14 +41,14 @@ The filter allows you to select tasks by their state or priority.
 
 ## 🚩 Priority :
 
-You can customize the priority of each task. There are three levels of priority: Low, Medium, High.
+You can customize the priority of each task. There are three levels of priority to organize your tasks: Low, Medium, High.
 
 ![priority](./src/assets/screenshots/priorities.png)
 
 
 ## 📱 Responsive Design :
 
-The application is fully responsive. There are two different layouts: one for computers and one for tablets. The organization of elements for tablets is adjusted to improve the user experience (UX).
+The application is responsive. There are two different layouts: one for computers and one for tablets. The organization of elements for tablets is adjusted to improve the user experience.
 
 ![tablet](./src/assets/screenshots/home-tablet.png)
 
@@ -62,27 +62,28 @@ The application is fully responsive. There are two different layouts: one for co
 
 # ⚙️ Installation
 
-Clone the repository:
+- Clone the repository:
 ```bash
 git clone https://github.com/arlmoop/To-Do-List-App
 ```
 
-Navigate into the project folder:
+- Navigate into the project folder:
 ```bash
 cd To-Do-List-App
 ```
 
-Install dependencies:
+- Install dependencies:
 ```bash
 npm install
 ```
 
-Run the development server:
+- Run the development server:
 ```bash
 npm run dev
 ```
 
 To see the app, copy and paste this URL in your browser: http://localhost:5173/
+
 Or press "o" and then Enter in the terminal while the local server is running.
 
 # 🚀 Future Improvements :
