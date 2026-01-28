@@ -41,14 +41,14 @@ The filter allows you to select tasks by their state or priority.
 
 ## 🚩 Priority :
 
-You can customize the priority of each task. There are three levels of priority: Low, Medium, High.
+You can customize the priority of each task. There are three levels of priority to organize your tasks: Low, Medium, High.
 
 ![priority](./src/assets/screenshots/priorities.png)
 
 
 ## 📱 Responsive Design :
 
-The application is fully responsive. There are two different layouts: one for computers and one for tablets. The organization of elements for tablets is adjusted to improve the user experience (UX).
+The application is responsive. There are two different layouts: one for computers and one for tablets. The organization of elements for tablets is adjusted to improve the user experience.
 
 ![tablet](./src/assets/screenshots/home-tablet.png)
 
