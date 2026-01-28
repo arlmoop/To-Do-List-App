@@ -65,7 +65,18 @@ The application is responsive. There are two differents designs, one for compute
 
 ```bash
 git clone https://github.com/arlmoop/To-Do-List-App
-cd myapp
+```
+
+```bash
+cd To-Do-List-App
+```
+
+```bash
 npm install
+```
+
+```bash
 npm run dev
 ```
+
+To see the App press "o" and "enter"
