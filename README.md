@@ -1,83 +1,93 @@
 # To-Do List App de Aurélien.K
 
-This repository contains a to-do list project develops with Vue JS. The App have many features :
+ - This repository contains a To-Do List project developed with Vue.js. The app has many features:
+ - Create custom tasks with different states: To-Do, In Progress, Completed
+ - Display statistics of the number of tasks remaining
+ - Change the priority level of each task
+ - Apply filters to the list of tasks
+ - Responsive design for different devices (tablet and computer)
 
-- Create custom tasks with different states : (To-Do, In Progress, Completed)
-- Contain statics of the number of tasks remaining
-- Change the level of priority of the task
-- Apply filter to the list of tasks
-- Responsive design for differents devices (tablet and computer)
+#📸 Screenshots of the project
 
-# Screenshots
-
-## Home :
+##🏠 Home :
 
 Here is a screenshot of the home page
 
 ![Home](./src/assets/screenshots/home-computer.png)
  
  
-## Create a Task :
+##📝 Create a Task :
 
-The input allows you to choose the title of the task. You can create the task by pressing the "enter" key or press the button on the right of the input.
+The input allows you to choose the title of the task. You can create a task by pressing the Enter key or by clicking the button on the right of the input.
 
 ![Counter](./src/assets/screenshots/input-title-task.png)
 
 
-## Tasks Counter :
+##📊 Tasks Counter :
 
-The counters update automatically whenever a task is created or modified. There is a specific counter for each available status.
+The counters update automatically whenever a task is created or modified. There is a specific counter for each status.
 
 ![Counter](./src/assets/screenshots/tasks-counter.png)
 
 
-## Filter :
+##🔍 Filter :
 
-The filter permits you to select the tasks by their state or priority.
+The filter allows you to select tasks by their state or priority.
 
 ![filter](./src/assets/screenshots/filter-select.png)
 
 ![options](./src/assets/screenshots/options-select.png)
 
 
-## Priority :
+##🚩 Priority :
 
-You can custom the priority of each tasks created. There are three levels of priority : Low, Medium, High.
+You can customize the priority of each task. There are three levels of priority: Low, Medium, High.
 
 ![priority](./src/assets/screenshots/priorities.png)
 
 
-## Responsive Design :
+##📱 Responsive Design :
 
-The application is responsive. There are two differents designs, one for computers and one for tablets. The organisation of the elements for tablets are differents to have a better UX
+The application is fully responsive. There are two different layouts: one for computers and one for tablets. The organization of elements for tablets is adjusted to improve the user experience (UX).
 
 ![tablet](./src/assets/screenshots/home-tablet.png)
 
 
-# Languages Used :
+#🛠️ Languages Used
 
 - JavaScript
 - Vue.js
 - Tailwind CSS
 
 
-# Installation :
+#⚙️ Installation
 
+Clone the repository:
 ```bash
 git clone https://github.com/arlmoop/To-Do-List-App
 ```
 
+Navigate into the project folder:
 ```bash
 cd To-Do-List-App
 ```
 
+Install dependencies:
 ```bash
 npm install
 ```
 
+Run the development server:
 ```bash
 npm run dev
 ```
 
-To see the App copy/past this url in your browser : http://localhost:5173/
-Or press "o" and "enter" in the terminal with you runing local server
+To see the app, copy and paste this URL in your browser: http://localhost:5173/
+Or press "o" and then Enter in the terminal while the local server is running.
+
+#🚀 Future Improvements :
+
+ - Backup to save the tasks
+ - Option to sort tasks by priority/status/date
+
+-- Aurelien's Project --
