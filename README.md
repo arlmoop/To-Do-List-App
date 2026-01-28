@@ -15,8 +15,8 @@ This repository contains a to-do list project develops with Vue JS. The App have
 Here is a screenshot of the home page
 
 ![Home](./src/assets/screenshots/home-computer.png)
-
-
+ 
+ 
 ## Create a Task :
 
 The input allows you to choose the title of the task. You can create the task by pressing the "enter" key or press the button on the right of the input.
@@ -79,4 +79,5 @@ npm install
 npm run dev
 ```
 
-To see the App press "o" and "enter"
+To see the App copy/past this url in your browser : http://localhost:5173/
+Or press "o" and "enter" in the terminal with you runing local server
