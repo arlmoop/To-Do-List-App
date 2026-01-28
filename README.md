@@ -83,6 +83,7 @@ npm run dev
 ```
 
 To see the app, copy and paste this URL in your browser: http://localhost:5173/
+
 Or press "o" and then Enter in the terminal while the local server is running.
 
 # 🚀 Future Improvements :
